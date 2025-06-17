@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="">
+        <label for="dados">Dados</label>
+        <select id="dados" name="dados" onchange="cambiarImagen()">
+            <option value="d4">d4</option>
+            <option value="d6">d6</option>
+            <option value="d8">d8</option>
+            <option value="d10">d10</option>
+            <option value="d12">d12</option>
+            <option value="d20">d20</option>
+            <option value="d100">d100</option>
+        </select>
+
+        <div class="imagen-wrapper">
+            <img src="./assets/roll.png" id="imagen" class="dado-img">
+        </div>
+        <label for="cantidad">Número de dados a lanzar</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="12" step="1">
+        <button type="button" onclick="tirar()">Lanzar</button>
+        <label>Resultados</label>
+        <input type="text" id="resultados">
+    </form>
+
+</body>
+<script src="./dados.js"></script>
+</html>
