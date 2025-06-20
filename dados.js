@@ -1,8 +1,9 @@
 let array = [];
 let tipo = "";
 function tirar(){
-    let cantidad = document.getElementById("cantidad").value;
-    let resultados = document.getElementById("resultados");
+    let cantidad = parseInt(document.getElementById("cantidad").value, 10);
+    cantidad = Math.min(Math.max(cantidad, 1), 12);
+    document.getElementById("cantidad").value = cantidad;
     tipo = document.getElementById("dados").value;
     array = [];
     switch (tipo){
